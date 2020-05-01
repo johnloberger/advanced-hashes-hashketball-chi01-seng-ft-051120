@@ -128,6 +128,10 @@ end
 
 # METHODS BELOW!!!!
 
+def most_points_scored
+  players.sort_by {|player| player.fetch(:points)}.last
+end
+
 def num_points_scored(insert_player_name)
   player = find_player(insert_player_name)
   player.fetch(:points)
